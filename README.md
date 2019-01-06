@@ -61,7 +61,10 @@ print('Null Values =',df.isnull().values.any())
 
 df.groupby('isFraud').hist(figsize=(16, 20), bins=50, xlabelsize=8, ylabelsize=8,alpha=0.4)
 ```
+### Non-Fraudulent(0)
 ![png](images/class_grouping.png)
+
+### Fraudulent(1)
 ![png](images/class_grouping1.png)
 
 ```python
@@ -177,12 +180,12 @@ plot_model_history(model_info)
 
 While building the model there was not particular hyper-parameter tuning technique used as we are dealing with a random sample of the whole dataset.
 As output of the model is binary (0 or 1), hence we have used activation functions as relu and sigmoid which are considered as more effective 
-to deal with binary classification problems. In the graphs it can be seen that the model is learning at every epoch and minimizing the loss. These graphs  
-are very effective for choosing the number of epochs as after a certain level the training line will start moving up again. It is also used to tackle 
+to deal with binary classification problems. In the graphs it can be seen that the model is learning at every epoch and minimizing the loss. 
+These graphs make it easier to choose the number of epochs as after a certain level the loss will start moving up again. It is also used to tackle 
 over fitting while training the models. 
 
 ```python
-''' Predicting the test results and '''
+''' Predicting the test results '''
 
 y_pred = model.predict_classes(x_test_scaled)
 acc = accuracy_score(y_test,y_pred)*100
