@@ -66,7 +66,7 @@ df.groupby('isFraud').hist(figsize=(16, 20), bins=50, xlabelsize=8, ylabelsize=8
 
 ```python
 
-''' co-relation matrix to check multicolinearity between variables '''
+''' correlation matrix to check multicolinearity between variables '''
 
 correlation = df.corr()
 plt.figure(figsize=(15,15))
