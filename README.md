@@ -194,7 +194,7 @@ print('Classification report', '\n', classification_report(y_test, y_pred), '\n'
 This is a Synthetic Financial Datasets For Fraud Detection
 Link : https://www.kaggle.com/ntnu-testimon/paysim1
 
-###Features
+-Features
 
 1. step: Maps a unit of time in the real world. In this case 1 step is 1 hour of time.
 2. type: CASH-IN, CASH-OUT, DEBIT, PAYMENT and TRANSFER
