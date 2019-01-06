@@ -77,6 +77,7 @@ plt.title('Correlation Matrix')
 sns.heatmap(correlation, vmax=1, square=True,annot=True,cmap='cubehelix')
 ```
 ![png](images/co-relation.png)
+
 In the given above correlation matrix we can see that variable oldbalanceDest 
 and newbalanceDest are highly correlated to each other, hence will remove on of the features.
 
