@@ -168,8 +168,8 @@ def plot_model_history(model_history):
     plt.show()
 plot_model_history(model_info)
 ```
-![png](images/df_epochs.PNG)
-![png](images/df_curves.PNG)
+![png](images/epochs.PNG)
+![png](images/curves.PNG)
 
 ```python
 ''' Predicting the test results and '''
