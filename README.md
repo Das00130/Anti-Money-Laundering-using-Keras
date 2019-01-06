@@ -25,6 +25,7 @@ from sklearn.metrics import accuracy_score
 ```python
 
 '''Importing the dataset and checking its properties '''
+
 df =  pd.read_csv("AML_dataset.csv")
 df.head()
 ```
@@ -49,6 +50,7 @@ df.drop('nameDest', axis=1, inplace=True)
 df.drop('isFlaggedFraud', axis=1, inplace=True)
 
 '''Checking for any null values'''
+
 print('Null Values =',df.isnull().values.any())
 ```
 ![png](images/null_values.PNG)
@@ -56,10 +58,11 @@ print('Null Values =',df.isnull().values.any())
 ```python
 
 ''' Visualising the variables by grouping them by class '''
+
 df.groupby('isFraud').hist(figsize=(16, 20), bins=50, xlabelsize=8, ylabelsize=8,alpha=0.4)
 ```
-![png](images/class_grouping.PNG)
-![png](images/class_grouping1.PNG)
+![png](images/class_grouping.png)
+![png](images/class_grouping1.png)
 
 ```python
 
@@ -70,7 +73,7 @@ plt.figure(figsize=(15,15))
 plt.title('Correlation Matrix')
 sns.heatmap(correlation, vmax=1, square=True,annot=True,cmap='cubehelix')
 ```
-![png](images/co-relation.PNG)
+![png](images/co-relation.png)
 
 ```python
 
