@@ -43,7 +43,7 @@ df.describe()
 
 ```python
 
-'''removing the unwanted features'''
+'''removing the unwanted features / too many unique values'''
 
 df.drop('nameOrig', axis=1, inplace=True)
 df.drop('nameDest', axis=1, inplace=True)
@@ -74,6 +74,8 @@ plt.title('Correlation Matrix')
 sns.heatmap(correlation, vmax=1, square=True,annot=True,cmap='cubehelix')
 ```
 ![png](images/co-relation.png)
+In the given above correlation matrix we can see that variable oldbalanceDest 
+and newbalanceDest are highly correlated to each other, hence will remove on of the features.
 
 ```python
 
@@ -91,6 +93,8 @@ print(df2.isFraud.value_counts())
 ```
 ![png](images/value_count.PNG)
 ![png](images/bar_value_count.PNG)
+
+As the dataset is quite big, we will use only 20,000 randomly chosen transactions to train our model and evaluate the results.
 
 ```python
 
@@ -170,6 +174,12 @@ plot_model_history(model_info)
 ```
 ![png](images/epochs.PNG)
 ![png](images/curves.PNG)
+
+While building the model there was not particular hyper-parameter tuning technique used as we are dealing with a random sample of the whole dataset.
+As output of the model is binary (0 or 1), hence we have used activation functions as relu and sigmoid which are considered as more effective 
+to deal with binary classification problems. In the graphs it can be seen that the model is learning at every epoch and minimizing the loss. These graphs  
+are very effective for choosing the number of epochs as after a certain level the training line will start moving up again. It is also used to tackle 
+over fitting while training the models. 
 
 ```python
 ''' Predicting the test results and '''
