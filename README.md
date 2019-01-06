@@ -189,3 +189,21 @@ print('Classification report', '\n', classification_report(y_test, y_pred), '\n'
 ```
 ![png](images/confusion_matrix.PNG)
 
+
+## About Used Dataset 
+This is a Synthetic Financial Datasets For Fraud Detection
+Link : https://www.kaggle.com/ntnu-testimon/paysim1
+
+###Features
+
+1. step: Maps a unit of time in the real world. In this case 1 step is 1 hour of time.
+2. type: CASH-IN, CASH-OUT, DEBIT, PAYMENT and TRANSFER
+3. amount: amount of the transaction in local currency
+4. nameOrig: customer who started the transaction
+5. oldbalanceOrg: initial balance before the transaction
+6. newbalanceOrig: customer's balance after the transaction.
+7. nameDest: recipient ID of the transaction.
+8. oldbalanceDest: initial recipient balance before the transaction.
+9. newbalanceDest: recipient's balance after the transaction.
+10. isFraud: identifies a fraudulent transaction (1) and non fraudulent (0)
+11. isFlaggedFraud: flags illegal attempts to transfer more than 200.000 in a single transaction.
